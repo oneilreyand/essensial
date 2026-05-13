@@ -1,32 +1,35 @@
 const { defineConfig, devices } = require('@playwright/test');
+require('dotenv').config();
 
 module.exports = defineConfig({
   testDir: './tests',
-  /* Run tests in files in parallel */
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
-  forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  reporter: [
+    ['list'],
+    ['html'],
+    ['monocart-reporter', {
+      name: 'Essensial E2E Coverage Report',
+      outputFile: './test-results/coverage/index.html',
+      coverage: {
+        // Collect coverage for files from the app's domain
+        entryFilter: (entry) => entry.url.includes('assist.id'),
+        // Filter sources in the report
+        sourceFilter: (sourcePath) => sourcePath.includes('assist.id'),
+      }
+    }]
+  ],
+  timeout: 120000,
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://dev-essensial.assist.id/',
-
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    // Kita tetap siapkan storageState di sini sebagai target simpan
+    storageState: '.auth/user.json',
   },
-
-  /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
+      // Mencari semua file .js di folder tests
+      testMatch: '**/*.js',
       use: { ...devices['Desktop Chrome'] },
     },
   ],

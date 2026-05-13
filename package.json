@@ -1,16 +1,16 @@
 {
-  "name": "qwt",
+  "name": "essensial-testing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright E2E testing for Essensial",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.59.1"
+    "@playwright/test": "^1.49.1",
+    "dotenv": "^16.4.5",
+    "monocart-reporter": "^2.10.1"
   }
 }

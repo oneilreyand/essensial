@@ -1,0 +1,81 @@
+{
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.1.950923731.1777978187",
+      "domain": ".assist.id",
+      "path": "/",
+      "expires": 1812538187.955138,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "acw_tc",
+      "value": "9581d31d17779781874161174e4a7584b08441e6a1c0216355de4ca9a78d02",
+      "domain": "dev-essensial.assist.id",
+      "path": "/",
+      "expires": 1777979987.398605,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_276TKKJRCP",
+      "value": "GS2.1.s1777978187$o1$g1$t1777978187$j60$l0$h0",
+      "domain": ".assist.id",
+      "path": "/",
+      "expires": 1812538187.817091,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "CLID",
+      "value": "c4b86fb637a14673a7f854380c8bc31e.20260505.20270505",
+      "domain": "www.clarity.ms",
+      "path": "/",
+      "expires": 1809514189.894117,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_ZG2R3VYSZM",
+      "value": "GS2.1.s1777978187$o1$g0$t1777978189$j58$l0$h0",
+      "domain": ".assist.id",
+      "path": "/",
+      "expires": 1812538189.982284,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://dev-essensial.assist.id",
+      "localStorage": [
+        {
+          "name": "index",
+          "value": "0"
+        },
+        {
+          "name": "token",
+          "value": "ROIN8Z4ywGFhmWxCWM551EI2HaLLxx9St018hAU53xmT0iv5go7PV5gjGnOh0GkX"
+        },
+        {
+          "name": "loginTime",
+          "value": "2026-05-05T10:49:49.821Z"
+        },
+        {
+          "name": "tooltipList-633bb37319eedc0eb106b6f8-5c00fdcf3b80ad75afc4cbef",
+          "value": "[]"
+        },
+        {
+          "name": "coachmark-633bb37319eedc0eb106b6f8",
+          "value": "{\"isCoachmarkDashboard\":0,\"isCoachmarkRawatJalan\":1,\"isCoachmarkEMR\":1,\"isCoachmarkApotek\":1,\"isCoachmarkCashier\":1,\"isCoachmarkSettings\":1}"
+        }
+      ]
+    }
+  ]
+}
